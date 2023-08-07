@@ -1,0 +1,8 @@
+/* Palette Colors */
+
+* {
+  al:   #00000090 ;
+  bg:   #00000045;
+  fg:   #EAEAEAFF;
+  bd:	#99000099;
+}
