@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 export _JAVA_AWT_WM_NONREPARENTING=1
-
+export WLR_NO_HARDWARE_CURSORS=1
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
