@@ -9,13 +9,15 @@ fi
 export WLR_NO_HARDWARE_CURSORS=1
 
 
-export WLR_EGL_NO_MODIFIERS=1
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_TYPE=wayland
+# export WLR_EGL_NO_MODIFIERS=1 
+# this breaks hyprland. DO NOT EXPORT
+
+export XDG_CURRENT_DESKTOP=Hyprland 
+export XDG_SESSION_TYPE=wayland 
 export XDG_SESSION_DESKTOP=Hyprland
 
 
-# Without this IDEA won't work
+# # Without this IDEA won't work
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 
