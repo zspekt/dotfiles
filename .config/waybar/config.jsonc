@@ -3,12 +3,16 @@
     "position": "top",
     "mod": "dock",
     "exclusive": true,
+    "margin-top": 12,
+    "margin-bottom": 0,
+    "margin-left": 11,
+    "margin-right": 11,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 50,
+    "height": 40,
     "modules-left": ["custom/launch_wofi","wlr/workspaces","cpu","memory","disk","hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray","custom/weather","custom/light_dark"],
+    "modules-right": ["pulseaudio","pulseaudio#microphone","tray"],
     
     "hyprland/window": {
         "format": "{}"
@@ -16,24 +20,6 @@
 
     "custom/launch_wofi": {
         "format": ""
-    },
-
-    "custom/lock_screen": {
-        "format": "",
-        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
-        "tooltip": false
-    },
-
-    "custom/light_dark": {
-        "format": "󰐾",
-        "on-click": "~/.config/waybar/scripts/baraction light",
-        "tooltip": false
-    },
-
-    "custom/power_btn": {
-        "format": "",
-        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-        "tooltip": false
     },
 
     "cpu": {
@@ -61,14 +47,6 @@
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
 
-    "custom/updates": {
-        "format": "{}",
-        "exec": "~/.config/waybar/scripts/update-sys",
-        "on-click": "~/.config/waybar/scripts/update-sys update",
-        "interval": 300,
-        "tooltip": true
-    },
-
     "wlr/workspaces": {
         "disable-scroll": true,
         "sort-by-number": true,
@@ -87,14 +65,6 @@
         }
     },
 
-   "custom/weather": {
-        //shows the current weather and forecast
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
-    },
 
     "tray": {
         "icon-size": 18,
@@ -105,28 +75,6 @@
         "format": "{:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{: %A, %B %e %Y}"
-    },
-
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
-        "min-length": 6
-    },
-
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "pulseaudio": {
