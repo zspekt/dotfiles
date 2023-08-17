@@ -9,7 +9,7 @@ WLR_NO_HARDWARE_CURSORS=1
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-
+export GPG_TTY="$(tty)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
