@@ -5,17 +5,30 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-WLR_NO_HARDWARE_CURSORS=1
+# without this u have no cursor on hyprland
+export WLR_NO_HARDWARE_CURSORS=1
 
+
+# export WLR_EGL_NO_MODIFIERS=1 
+# this breaks hyprland. DO NOT EXPORT
+
+export XDG_CURRENT_DESKTOP=Hyprland 
+export XDG_SESSION_TYPE=wayland 
+export XDG_SESSION_DESKTOP=Hyprland
+
+
+# # Without this IDEA won't work
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+
+export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-export GPG_TTY="$(tty)"
+
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Without this IDEA won't work
-export _JAVA_AWT_WM_NONREPARENTING=1
 
 
 # History in cache directory:
@@ -33,6 +46,7 @@ alias p=passmenu
 alias int="ping -c 3 ping.archlinux.org"
 alias vim=nvim
 alias vi=nvim
+alias ls='ls -l'
 
 # Basic auto/tab complete:
 autoload -Uz compinit && compinit
