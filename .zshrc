@@ -39,9 +39,10 @@ HISTFILE=~/.cache/zsh/history
 setopt HIST_EXPIRE_DUPS_FIRST
 
 # aliases
+alias cat=bat
 alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
 alias du="du -hc"
-alias rwb= "killall waybar ; waybar & disown"
+alias rwb= "killall waybar; waybar & disown"
 alias p=passmenu
 alias int="ping -c 3 ping.archlinux.org"
 alias vim=nvim
