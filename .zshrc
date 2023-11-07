@@ -12,9 +12,10 @@ export WLR_NO_HARDWARE_CURSORS=1
 # export WLR_EGL_NO_MODIFIERS=1 
 # this breaks hyprland. DO NOT EXPORT
 
-export XDG_CURRENT_DESKTOP=Hyprland 
-export XDG_SESSION_TYPE=wayland 
-export XDG_SESSION_DESKTOP=Hyprland
+# possible this shouldn't be here
+# export XDG_CURRENT_DESKTOP=Hyprland 
+# export XDG_SESSION_TYPE=wayland 
+# export XDG_SESSION_DESKTOP=Hyprland
 
 
 # # Without this IDEA won't work
@@ -38,6 +39,7 @@ SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 setopt HIST_EXPIRE_DUPS_FIRST
 
+
 # aliases
 alias cat=bat
 alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
@@ -48,6 +50,9 @@ alias int="ping -c 3 ping.archlinux.org"
 alias vim=nvim
 alias vi=nvim
 alias ls='ls -l'
+alias nvlog="journalctl | nvim"
+alias gmi="go mod init"
+alias gor="go run"
 
 # Basic auto/tab complete:
 autoload -Uz compinit && compinit
