@@ -1,1 +1,4 @@
 
+[submodule "/home/zspekt/.config/nvim"]
+	path = /home/zspekt/.config/nvim
+	url = https://github.com/zspekt/chadfork.git
