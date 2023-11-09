@@ -42,7 +42,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 # aliases
 alias cat=bat
-alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
+# goodbye bare repo dotfile management. hello stow :3
+#alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
 alias du="du -hc"
 alias rwb= "killall waybar; waybar & disown"
 alias p=passmenu
