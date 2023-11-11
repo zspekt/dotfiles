@@ -5,26 +5,57 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# without this u have no cursor on hyprland
-export WLR_NO_HARDWARE_CURSORS=1
-
-
+################################################################################
+############################ WAYLAND STUFF #####################################
+################################################################################
+ 
 # export WLR_EGL_NO_MODIFIERS=1 
 # this breaks hyprland. DO NOT EXPORT
 
-export XDG_CURRENT_DESKTOP=Hyprland 
-export XDG_SESSION_TYPE=wayland 
-export XDG_SESSION_DESKTOP=Hyprland
+# possible this shouldn't be here
+# export XDG_CURRENT_DESKTOP=Hyprland 
+# export XDG_SESSION_TYPE=wayland 
+# export XDG_SESSION_DESKTOP=Hyprland
 
+# tell firefox to run natively in wayland
+MOZ_ENABLE_WAYLAND=1
+
+# without this u have no cursor on hyprland
+export WLR_NO_HARDWARE_CURSORS=1
 
 # # Without this IDEA won't work
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+################################################################################
+
+
+################################################################################
+############################ SSH and GPG #######################################
+################################################################################
 
 export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
 
+# thank u contre
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+#   # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+#   # SSH Configuration with GPG
+#   #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+#   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+#   gpgconf --launch gpg-agent
+# fi
+
+if [[ -z $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+  # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+  # SSH Configuration with GPG
+  #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  gpgconf --launch gpg-agent
+  alias cat=bat
+fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -33,14 +64,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # History in cache directory:
 setopt SHARE_HISTORY
-HISTSIZE=9999
+HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 setopt HIST_EXPIRE_DUPS_FIRST
 
+
 # aliases
 alias cat=bat
-alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
+# goodbye bare repo dotfile management. hello stow :3
+#alias config='/usr/bin/git --git-dir=/home/zspekt/.cfg/ --work-tree=/home/zspekt'
 alias du="du -hc"
 alias rwb= "killall waybar; waybar & disown"
 alias p=passmenu
@@ -48,6 +81,15 @@ alias int="ping -c 3 ping.archlinux.org"
 alias vim=nvim
 alias vi=nvim
 alias ls='ls -l'
+alias nvlog="journalctl | nvim"
+alias gmi="go mod init"
+alias gor="go run"
+
+################################################################################
+
+################################################################################
+############################### plugins ########################################
+################################################################################
 
 # Basic auto/tab complete:
 autoload -Uz compinit && compinit
@@ -61,7 +103,7 @@ _comp_options+=(globdots)               # Include hidden files.
 bindkey -v
 export KEYTIMEOUT=1
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -133,7 +175,6 @@ setopt PUSHD_MINUS
 
 plugins=(git)
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #commented out because there is a delay when using this vi mode plugin: hitting esc 
 #and quickly dding isn't responsive as there is a small yet undoubtedly noticeable 
@@ -148,15 +189,14 @@ bindkey '^[[B' history-substring-search-down
 setopt HIST_IGNORE_ALL_DUPS
 
 #messes with my tab autocomplete
-#source ~/programs/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/programs/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#E6E6E6,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#454454"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 export PATH=/home/zspekt/scripts/scripts-in-path:$PATH
-MOZ_ENABLE_WAYLAND=1
+
+# needs to be at the end
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
