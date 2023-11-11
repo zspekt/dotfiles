@@ -1,0 +1,23 @@
+romkatv/zsh-defer
+ohmyzsh/ohmyzsh path:lib
+
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/git kind:defer
+#ohmyzsh/ohmyzsh path:plugins/git-extras kind:defer
+#ohmyzsh/ohmyzsh path:plugins/git-prompt kind:defer
+ohmyzsh/ohmyzsh path:plugins/golang kind:defer
+ohmyzsh/ohmyzsh path:plugins/python kind:defer
+
+# asks me to auth to clone a public repo..?
+#romkatv/powerlevel10
+
+# suggests pkg to install if command not found
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search kind:defer
+
+
+
+
