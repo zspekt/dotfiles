@@ -188,6 +188,10 @@ bindkey -s '^o' 'lfcd\n'
 
 setopt HIST_IGNORE_ALL_DUPS
 
+# bindings for history-substring-search-up
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # autoload -Uz compinit && compinit
 # zstyle ':completion:*' menu select
 # zmodload zsh/complist
