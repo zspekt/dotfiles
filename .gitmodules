@@ -1,7 +1,3 @@
-
-[submodule "/home/zspekt/.config/nvim"]
-	path = /home/zspekt/.config/nvim
+[submodule "$HOME/.dotfiles/.config/nvim"]
+	path = $HOME/.dotfiles/.config/nvim
 	url = https://github.com/zspekt/chadfork.git
-[submodule ".zsh/antidote"]
-	path = .zsh/antidote
-	url = https://github.com/mattmc3/antidote.git
