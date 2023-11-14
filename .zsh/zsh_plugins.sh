@@ -33,6 +33,9 @@ fpath+=( /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH
 zsh-defer source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/golang/golang.plugin.zsh
 fpath+=( /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/python )
 zsh-defer source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/python/python.plugin.zsh
+fpath+=( /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-romkatv-SLASH-powerlevel10k )
+source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-romkatv-SLASH-powerlevel10k/powerlevel10k.zsh-theme
+source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-romkatv-SLASH-powerlevel10k/powerlevel9k.zsh-theme
 fpath+=( /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/command-not-found )
 source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/command-not-found/command-not-found.plugin.zsh
 fpath+=( /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions )
