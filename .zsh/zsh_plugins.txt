@@ -5,11 +5,10 @@ ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/git kind:defer
 #ohmyzsh/ohmyzsh path:plugins/git-extras kind:defer
 #ohmyzsh/ohmyzsh path:plugins/git-prompt kind:defer
-ohmyzsh/ohmyzsh path:plugins/golang kind:defer
+ohmyzsh/ohmyzsh path:plugins/golang
 ohmyzsh/ohmyzsh path:plugins/python kind:defer
 
-# asks me to auth to clone a public repo..?
-#romkatv/powerlevel10
+romkatv/powerlevel10k
 
 # suggests pkg to install if command not found
 ohmyzsh/ohmyzsh path:plugins/command-not-found
