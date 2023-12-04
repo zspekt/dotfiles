@@ -9,6 +9,10 @@ gpgconf --launch gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export PATH=$PATH:/home/zspekt/go
+
+export PATH=$PATH:/home/zspekt/go/bin
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

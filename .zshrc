@@ -114,6 +114,7 @@ alias ls='ls -l'
 alias nvlog="journalctl | nvim"
 alias gmi="go mod init"
 alias gor="go run"
+alias ipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
 
 
 ################################################################################
@@ -183,6 +184,10 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 ################################################################################
 
 export PATH=$PATH:/home/zspekt/programs/scripts
+
+export PATH=$PATH:/home/zspekt/go
+
+export PATH=$PATH:/home/zspekt/go/bin
 
 ################################################################################
 # more bloated theme stuff
