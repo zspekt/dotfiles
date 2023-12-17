@@ -104,6 +104,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 ################################################################################
 
 # alias cat=bat
+alias gs="git switch"
+
 alias du="du -hc"
 alias rwb="killall waybar; waybar & disown"
 alias p=passmenu
