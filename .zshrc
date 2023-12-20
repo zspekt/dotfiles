@@ -104,6 +104,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 ################################################################################
 
 # alias cat=bat
+#
+alias gcsmsp="gcsm 'submodule' && gp"
 alias gs="git switch"
 
 alias du="du -hc"
