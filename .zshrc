@@ -45,7 +45,6 @@ fi
 # export XDG_CURRENT_DESKTOP=Hyprland 
 # export XDG_SESSION_TYPE=wayland 
 # export XDG_SESSION_DESKTOP=Hyprland
-
 # tell firefox to run natively in wayland
 MOZ_ENABLE_WAYLAND=1
 
@@ -90,6 +89,11 @@ fi
 ################################################################################
 # miscellaneous 
 ################################################################################
+
+# interactive cd on tab with fzf
+# source /home/zspekt/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+
+export ZSH_CACHE_DIR=$HOME/.cache/zsh
 
 # History in cache directory:
 setopt SHARE_HISTORY
@@ -196,6 +200,8 @@ export PATH=$PATH:/home/zspekt/go/bin
 ################################################################################
 # more bloated theme stuff
 ################################################################################
+
+autoload -Uz compinit && compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
