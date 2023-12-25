@@ -7,6 +7,8 @@ ohmyzsh/ohmyzsh path:plugins/git kind:defer
 #ohmyzsh/ohmyzsh path:plugins/git-prompt kind:defer
 ohmyzsh/ohmyzsh path:plugins/golang
 ohmyzsh/ohmyzsh path:plugins/python kind:defer
+ohmyzsh/ohmyzsh path:plugins/gh kind:defer
+# ohmyzsh/ohmyzsh path:plugins/zsh-interactive-cd
 
 romkatv/powerlevel10k
 
