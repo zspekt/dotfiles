@@ -124,6 +124,10 @@ alias gmi="go mod init"
 alias gor="go run"
 alias ipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
 
+# zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+# zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+# zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+# zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 ################################################################################
 # plugins 
