@@ -108,21 +108,26 @@ setopt HIST_EXPIRE_DUPS_FIRST
 ################################################################################
 
 # alias cat=bat
-#
+
+alias vb="VBox"
+alias vbm="vboxmanage"
+
 alias gcsmsp="gcsm 'submodule' && gp"
 alias gs="git switch"
 
 alias du="du -hc"
 alias rwb="killall waybar; waybar & disown"
 alias p=passmenu
-alias int="ping -c 3 ping.archlinux.org"
 # alias vim=nvim
 # alias vi=nvim
 alias ls='ls -l'
 alias nvlog="journalctl | nvim"
+
 alias gmi="go mod init"
 alias gor="go run"
-alias ipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
+
+alias gipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
+alias int="ping -c 3 ping.archlinux.org"
 
 # zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 # zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
