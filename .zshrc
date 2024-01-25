@@ -1,5 +1,5 @@
 ################################################################################
-# bloated theme
+# bloated theme ################################################################
 ################################################################################
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,11 +11,13 @@ fi
 
 
 ################################################################################
-# speed up completion by compiling compdump
+# speed up completion by compiling compdump ####################################
 ################################################################################
 
 # to measure startup times 
 # zmodload zsh/zprof
+
+# compile compdump for maximum speed
 
 autoload -Uz compinit
 ZSH_COMPDUMP=${ZSH_COMPDUMP:-${ZDOTDIR:-~}/.zcompdump}
@@ -35,7 +37,7 @@ fi
 
 
 ################################################################################
-# WAYLAND STUFF 
+# wayland stuff ################################################################
 ################################################################################
  
 # export WLR_EGL_NO_MODIFIERS=1 
@@ -54,11 +56,9 @@ export WLR_NO_HARDWARE_CURSORS=1
 # # Without this IDEA won't work
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-################################################################################
-
 
 ################################################################################
-# SSH and GPG 
+# SSH and GPG ##################################################################
 ################################################################################
 
 export GPG_TTY="$(tty)"
@@ -87,7 +87,7 @@ fi
 
 
 ################################################################################
-# miscellaneous 
+# misc #########################################################################
 ################################################################################
 
 # interactive cd on tab with fzf
@@ -104,25 +104,30 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 
 ################################################################################
-# aliases 
+# aliases ######################################################################
 ################################################################################
 
 # alias cat=bat
-#
+
+alias vb="VBox"
+alias vbm="vboxmanage"
+
 alias gcsmsp="gcsm 'submodule' && gp"
 alias gs="git switch"
 
 alias du="du -hc"
 alias rwb="killall waybar; waybar & disown"
 alias p=passmenu
-alias int="ping -c 3 ping.archlinux.org"
 # alias vim=nvim
 # alias vi=nvim
 alias ls='ls -l'
 alias nvlog="journalctl | nvim"
+
 alias gmi="go mod init"
 alias gor="go run"
-alias ipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
+
+alias gipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
+alias int="ping -c 3 ping.archlinux.org"
 
 # zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 # zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
@@ -130,7 +135,7 @@ alias ipv6="ifconfig |  grep -o 'inet6 [^fde:].*global>' | awk '{print \$2}'"
 # zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 ################################################################################
-# plugins 
+# plugins ######################################################################
 ################################################################################
 
 # antidote
@@ -192,7 +197,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 
 ################################################################################
-# paths
+# paths ########################################################################
 ################################################################################
 
 export PATH=$PATH:/home/zspekt/programs/scripts
@@ -202,7 +207,7 @@ export PATH=$PATH:/home/zspekt/go
 export PATH=$PATH:/home/zspekt/go/bin
 
 ################################################################################
-# more bloated theme stuff
+# more bloated theme stuff #####################################################
 ################################################################################
 
 autoload -Uz compinit && compinit
