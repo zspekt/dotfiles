@@ -109,6 +109,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 # alias cat=bat
 
+alias startx="Hyprland"
+
 alias vb="VBox"
 alias vbm="vboxmanage"
 

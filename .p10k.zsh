@@ -1704,7 +1704,13 @@
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
   (( ! $+functions[p10k] )) || p10k reload
 }
-
+typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
+typeset -g POWERLEVEL9K_SHOW_RULER=false
+typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
+typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_SUFFIX=''
+typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_SUFFIX=''
+typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_SUFFIX=''
+#
 # Tell `p10k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
