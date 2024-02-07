@@ -79,9 +79,9 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:\t\t\t\t\t%H:%M \t\t %m/%d/%Y}",
 		"tooltip": true,
-		"tooltip-format": "{: %A, %B %e %Y}"
+		"tooltip-format": "{: %A, %B %e %Y}"
 	},
 
 	"pulseaudio": {

@@ -10,8 +10,8 @@
 }
 
 window#waybar {
-    color: #cdd6f4;
-    background: rgba(30, 30, 46, 0.9);
+    color: #bfbb9f;
+    background: rgba(31, 31, 40, 1.0);
     /* opacity: 0.8; */
     border-radius: 14px 14px 14px 14px;
     min-height: 0px;
@@ -22,7 +22,7 @@ window#waybar {
 }
 
 tooltip {
-    background: #1e1e2e;
+    background: #1f1f28;
     opacity: 1;
     border-radius: 10px;
     /* border-width: 0px; */
@@ -31,28 +31,28 @@ tooltip {
 }
 
 tooltip label{
-    color: #cdd6f4;
+    color: #bfbb9f;
 }
 
 #workspaces button {
     padding: 5px; /*disabling the padding looks better if u want inverted colors for the active tag*/
-    color: #a6adc8;
+    color: #bfbb9f;
     margin-top: 0px;
     /* margin-right: 5px; */
 }
 
 #workspaces button.persistent {
-  color: #990099;
+  color: #d36937;
 }
 
 #workspaces button.active {
-    background: #a6adc8;
+    background: #bfbb9f;
     color: #313267;
     border-radius: 10px;
 }
 
 #workspaces button.focused {
-    color: #a6adc8;
+    color: #bfbb9f;
     background: #eba0ac;
     border-radius: 10px;
 }
@@ -65,7 +65,7 @@ tooltip label{
 
 #workspaces button:hover {
     background: #11111b;
-    color: #cdd6f4;
+    color: #bfbb9f;
     border-radius: 10px;
 }
 
@@ -79,7 +79,7 @@ tooltip label{
 #network,
 #tray,
 #workspaces{
-    /* background: #1e1e2e; */
+    /* background: #1f1f28; */
     background: transparent;
     opacity: 1;
     padding: 0px 10px;
@@ -126,14 +126,14 @@ tooltip label{
 }
 
 #pulseaudio {
-    color: #89b4fa;
+    color: #d36937;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px 0px 0px 10px;
 }
 
 #pulseaudio.microphone {
-    color: #cba6f7;
+    color: #738fc7;
     border-left: 0px;
     border-right: 0px;
 }
