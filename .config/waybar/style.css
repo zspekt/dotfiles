@@ -1,44 +1,45 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    font-size: 18px;
-    min-height: 0px;
-    padding: 0px;
-    margin: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 18px;
+  min-height: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 window#waybar {
-    color: #bfbb9f;
-    background: rgba(31, 31, 40, 1.0);
-    /* opacity: 0.8; */
-    border-radius: 14px 14px 14px 14px;
-    min-height: 0px;
-    padding: 0;
-    /* margin: 10px 10px 0px 0px; */
-    /* margin-top: 55px; */
-    /* padding: 9px 10px 20px 4px; */
+  color: #bfbb9f;
+  background: rgba(31, 31, 40, 1);
+  /* opacity: 0.8; */
+  border-radius: 14px 14px 14px 14px;
+  min-height: 0px;
+  padding: 0;
+  /* margin: 10px 10px 0px 0px; */
+  /* margin-top: 55px; */
+  /* padding: 9px 10px 20px 4px; */
 }
 
 tooltip {
-    background: #1f1f28;
-    opacity: 1;
-    border-radius: 10px;
-    /* border-width: 0px; */
-    /* border-style: solid; */
-    /* border-color: #11111b; */
+  background: #1f1f28;
+  opacity: 1;
+  border-radius: 10px;
+  /* border-width: 0px; */
+  /* border-style: solid; */
+  /* border-color: #11111b; */
 }
 
-tooltip label{
-    color: #bfbb9f;
+tooltip label {
+  color: #bfbb9f;
 }
 
 #workspaces button {
-    padding: 5px; /*disabling the padding looks better if u want inverted colors for the active tag*/
-    color: #bfbb9f;
-    margin-top: 0px;
-    /* margin-right: 5px; */
+  padding: 5px;
+  /*disabling the padding looks better if u want inverted colors for the active tag*/
+  color: #bfbb9f;
+  margin-top: 0px;
+  /* margin-right: 5px; */
 }
 
 #workspaces button.persistent {
@@ -46,27 +47,27 @@ tooltip label{
 }
 
 #workspaces button.active {
-    background: #bfbb9f;
-    color: #313267;
-    border-radius: 10px;
+  background: #bfbb9f;
+  color: #313267;
+  border-radius: 10px;
 }
 
 #workspaces button.focused {
-    color: #bfbb9f;
-    background: #eba0ac;
-    border-radius: 10px;
+  color: #bfbb9f;
+  background: #eba0ac;
+  border-radius: 10px;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
-    border-radius: 10px;
+  color: #11111b;
+  background: #a6e3a1;
+  border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #bfbb9f;
-    border-radius: 10px;
+  background: #11111b;
+  color: #bfbb9f;
+  border-radius: 10px;
 }
 
 #custom-launch_wofi,
@@ -78,63 +79,68 @@ tooltip label{
 #pulseaudio,
 #network,
 #tray,
-#workspaces{
-    /* background: #1f1f28; */
-    background: transparent;
-    opacity: 1;
-    padding: 0px 10px;
-    margin: 0px 0px 0px 0px;
-    margin-top: 0px;
-    border: 0px;
+#workspaces {
+  /* background: #1f1f28; */
+  background: transparent;
+  opacity: 1;
+  padding: 0px 10px;
+  margin: 0px 0px 0px 0px;
+  margin-top: 0px;
+  border: 0px;
 }
 
 #tray {
-    border-radius: 10px 10px 10px 10px;
-    margin-right: 10px;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 10px;
 }
 
-#custom-lock_screen, #backlight, #custom-launch_wofi, #cpu {
-    border-radius: 10px 0px 0px 10px;
+#custom-lock_screen,
+#backlight,
+#custom-launch_wofi,
+#cpu {
+  border-radius: 10px 0px 0px 10px;
 }
 
-#custom-light_dark, #workspaces, #pulseaudio.microphone, #disk {
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+#custom-light_dark,
+#workspaces,
+#pulseaudio.microphone,
+#disk {
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 10px;
 }
 
 #clock {
-    border-radius: 10px 10px 10px 10px;
-    margin-right: 10px;
-    margin-left: 10px;
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #workspaces {
-    padding-right: 0px;
-    padding-left: 5px;
+  padding-right: 0px;
+  padding-left: 5px;
 }
 
 #window {
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #custom-launch_wofi {
-    color: #89b4fa;
-    margin-left: 10px;
-    border-right: 0px;
+  color: #89b4fa;
+  margin-left: 10px;
+  border-right: 0px;
 }
 
 #pulseaudio {
-    color: #d36937;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 0px 0px 0px 10px;
+  color: #d36937;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px 0px 0px 10px;
 }
 
 #pulseaudio.microphone {
-    color: #738fc7;
-    border-left: 0px;
-    border-right: 0px;
+  color: #738fc7;
+  border-left: 0px;
+  border-right: 0px;
 }
-
