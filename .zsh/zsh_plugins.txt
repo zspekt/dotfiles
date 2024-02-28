@@ -15,7 +15,14 @@ ohmyzsh/ohmyzsh path:plugins/python kind:defer
 
 ohmyzsh/ohmyzsh path:plugins/gh kind:defer
 
-ohmyzsh/ohmyzsh path:plugins/alias-finder kind:defer
+ohmyzsh/ohmyzsh path:plugins/alias-finder
+
+# ohmyzsh/ohmyzsh path:plugins/podman
+
+ 
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/docker-machine
 
 zsh-users/zsh-completions
 

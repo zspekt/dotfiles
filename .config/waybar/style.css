@@ -111,8 +111,7 @@ tooltip label {
 
 #clock {
   border-radius: 10px 10px 10px 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 80;
 }
 
 #workspaces {

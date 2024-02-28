@@ -19,7 +19,13 @@
 		"hyprland/window"
 	],
 	"modules-center": ["clock"],
-	"modules-right": ["pulseaudio", "pulseaudio#microphone", "tray"],
+	"modules-right": [
+		"network#speed",
+		"network#speedi",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"tray"
+	],
 
 	"hyprland/window": {
 		"format": "{}",
@@ -79,7 +85,7 @@
 	},
 
 	"clock": {
-		"format": "{:\t\t\t\t\t%H:%M \t\t %m/%d/%Y}",
+		"format": "{:%H:%M \t\t %d/%m/%Y}",
 		"tooltip": true,
 		"tooltip-format": "{: %A, %B %e %Y}"
 	},
@@ -120,5 +126,34 @@
 		"critical-threshold": 70,
 		"format-critical": " {temperatureC}°C",
 		"on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+	},
+
+	"network#speed": {
+		"interval": 1,
+		"format": "{ifname}",
+		"format-wifi": "{bandwidthDownBytes}   ",
+		"format-ethernet": "{bandwidthDownBytes}   ",
+		"format-disconnected": "󰌙",
+		"tooltip-format": "{ipaddr}",
+		"format-linked": "󰈁 {ifname} (No IP)",
+		"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+		"tooltip-format-ethernet": "{ifname} 󰌘",
+		"tooltip-format-disconnected": "󰌙 Disconnected",
+		"max-length": 15,
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+	},
+
+	"network#speedi": {
+		"interval": 1,
+		"format": "{ifname}",
+		"format-wifi": "{bandwidthUpBytes}  ",
+		"format-ethernet": "{bandwidthUpBytes}  ",
+		"tooltip-format": "{ipaddr}",
+		"format-linked": "󰈁 {ifname} (No IP)",
+		"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+		"tooltip-format-ethernet": "{ifname} 󰌘",
+		"tooltip-format-disconnected": "󰌙 Disconnected",
+		"max-length": 20,
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
 	}
 }
