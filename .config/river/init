@@ -8,14 +8,19 @@
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
 
-# Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
+# copied off someone's config
+riverctl spawn "/usr/lib/xdg-desktop-portal"
 
+riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+
+riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" # More wayland magic (screen sharing etc.)
+
+# Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-# riverctl map normal Super+Shift Return spawn foot
-riverctl map normal Super Return spawn kitty
+riverctl map normal Super+Shift Return spawn kitty
 
 # Super+Q to close the focused view
-riverctl map normal Super+Shift Q close
+riverctl map normal Super Q close
 
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift E exit
