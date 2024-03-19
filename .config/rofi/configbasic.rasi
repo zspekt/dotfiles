@@ -14,10 +14,10 @@ window {
     transparency:                   "real";
     background-color:               @al;
     text-color: 					          @fg;
-    border:			                    0px;
-    border-color:		                #00000001;
+    border:			                    10px;
+    border-color:		                #00000000;
     border-radius:                  10px;
-    width:                          1000px;
+    width:                          500px;
 }
 
 prompt {
@@ -85,8 +85,7 @@ element {
 }
 
 element selected {
-   background-color: #00000030;
-   text-color: @fg;
+   background-color: #00000000;
 }
 
 element-text {
@@ -94,8 +93,13 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0;
     background-color:               #00000000;
-    text-color: 					          @fg;
+    text-color: @fg;
 }
+
+element-text selected {
+   text-color: #D36937;
+}
+
 configuration {
 /*	modes: "drun,run,ssh, keys";*/
 	font: "jetbrains mono nerd font 15";
