@@ -108,8 +108,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 # alias cat=bat
 
-alias gff="git ls-files | fzf"
-
 alias fdot="find . | fzf"
 
 alias startx="Hyprland"
