@@ -108,6 +108,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 # alias cat=bat
 
+alias kc=kubectl
+
 alias fdot="find . | fzf"
 
 alias startx="Hyprland"
