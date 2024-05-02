@@ -65,9 +65,10 @@
 		"disable-scroll": true,
 		"sort-by-number": true,
 		"on-click": "activate",
+
     "persistent-workspaces": {
-      "DP-3" : [1,2,3,4,5,6,7],
-      "HDMI-A-2": [8,9,10]
+      "DP-2" : [1, 2, 3, 4, 5, 6, 7],
+      "HDMI-A-2": [8, 9, 10]
     },
 
 		// "persistent_workspaces": {

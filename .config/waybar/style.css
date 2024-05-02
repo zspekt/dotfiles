@@ -42,7 +42,7 @@ tooltip label {
   /* margin-right: 5px; */
 }
 
-#workspaces button.persistent {
+#workspaces button.empty {
   color: #d36937;
 }
 
