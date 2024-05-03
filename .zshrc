@@ -1,4 +1,4 @@
-##l##############################################################################
+################################################################################
 # bloated theme ################################################################
 ################################################################################
 
@@ -6,7 +6,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 
@@ -14,7 +14,7 @@ fi
 # speed up completion by compiling compdump ####################################
 ################################################################################
 
-# to measure startup times 
+# to measure startup times
 # zmodload zsh/zprof
 
 # compile compdump for maximum speed
@@ -24,28 +24,28 @@ ZSH_COMPDUMP=${ZSH_COMPDUMP:-${ZDOTDIR:-~}/.zcompdump}
 
 # cache .zcompdump for about a day
 if [[ $ZSH_COMPDUMP(#qNmh-20) ]]; then
-  compinit -C -d "$ZSH_COMPDUMP"
+    compinit -C -d "$ZSH_COMPDUMP"
 else
-  compinit -i -d "$ZSH_COMPDUMP"; touch "$ZSH_COMPDUMP"
+    compinit -i -d "$ZSH_COMPDUMP"; touch "$ZSH_COMPDUMP"
 fi
 {
-  # compile .zcompdump
-  if [[ -s "$ZSH_COMPDUMP" && (! -s "${ZSH_COMPDUMP}.zwc" || "$ZSH_COMPDUMP" -nt "${ZSH_COMPDUMP}.zwc") ]]; then
-    zcompile "$ZSH_COMPDUMP"
-  fi
+    # compile .zcompdump
+    if [[ -s "$ZSH_COMPDUMP" && (! -s "${ZSH_COMPDUMP}.zwc" || "$ZSH_COMPDUMP" -nt "${ZSH_COMPDUMP}.zwc") ]]; then
+        zcompile "$ZSH_COMPDUMP"
+    fi
 } &!
 
 
 ################################################################################
 # wayland stuff ################################################################
 ################################################################################
- 
-# export WLR_EGL_NO_MODIFIERS=1 
+
+# export WLR_EGL_NO_MODIFIERS=1
 # this breaks hyprland. DO NOT EXPORT
 
 # possible this shouldn't be here
-# export XDG_CURRENT_DESKTOP=Hyprland 
-# export XDG_SESSION_TYPE=wayland 
+# export XDG_CURRENT_DESKTOP=Hyprland
+# export XDG_SESSION_TYPE=wayland
 # export XDG_SESSION_DESKTOP=Hyprland
 # tell firefox to run natively in wayland
 MOZ_ENABLE_WAYLAND=1
@@ -55,7 +55,6 @@ export WLR_NO_HARDWARE_CURSORS=1
 
 # # Without this IDEA won't work
 export _JAVA_AWT_WM_NONREPARENTING=1
-
 
 ################################################################################
 # SSH and GPG ##################################################################
@@ -76,13 +75,13 @@ export GPG_TTY="$(tty)"
 # fi
 
 if [[ -z $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-  # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
-  # SSH Configuration with GPG
-  #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  gpgconf --launch gpg-agent
-  alias cat=bat
+    export EDITOR='nvim'
+    # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+    # SSH Configuration with GPG
+    #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
+    alias cat=bat
 fi
 
 
@@ -150,15 +149,15 @@ export KEYTIMEOUT=1
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
+    if [[ ${KEYMAP} == vicmd ]] ||
+    [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+    [[ ${KEYMAP} == viins ]] ||
+    [[ ${KEYMAP} = '' ]] ||
+    [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
 }
 zle -N zle-keymap-select
 zle-line-init() {
@@ -218,3 +217,5 @@ autoload -Uz compinit && compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(zoxide init --cmd cd zsh)"
