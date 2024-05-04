@@ -205,7 +205,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # paths ########################################################################
 ################################################################################
 
-export PATH=$PATH:/home/zspekt/programs/scripts
+export PATH=$PATH:/home/zspekt/scripts
 
 export PATH=$PATH:/home/zspekt/go
 
