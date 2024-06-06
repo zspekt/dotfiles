@@ -9,32 +9,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
-################################################################################
-# speed up completion by compiling compdump ####################################
-################################################################################
-
 # to measure startup times
 # zmodload zsh/zprof
-
-# compile compdump for maximum speed
-
-autoload -Uz compinit
-ZSH_COMPDUMP=${ZSH_COMPDUMP:-${ZDOTDIR:-~}/.zcompdump}
-
-# cache .zcompdump for about a day
-if [[ $ZSH_COMPDUMP(#qNmh-20) ]]; then
-    compinit -C -d "$ZSH_COMPDUMP"
-else
-    compinit -i -d "$ZSH_COMPDUMP"; touch "$ZSH_COMPDUMP"
-fi
-{
-    # compile .zcompdump
-    if [[ -s "$ZSH_COMPDUMP" && (! -s "${ZSH_COMPDUMP}.zwc" || "$ZSH_COMPDUMP" -nt "${ZSH_COMPDUMP}.zwc") ]]; then
-        zcompile "$ZSH_COMPDUMP"
-    fi
-} &!
-
 
 ################################################################################
 # wayland stuff ################################################################
@@ -218,8 +194,6 @@ export PATH=$PATH:/home/zspekt/go/bin
 ################################################################################
 # more bloated theme stuff #####################################################
 ################################################################################
-
-autoload -Uz compinit && compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
