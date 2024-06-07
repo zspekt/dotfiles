@@ -1,4 +1,4 @@
 
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:zspekt/chadfork.git
+	url = https://github.com/zspekt/chadfork.git

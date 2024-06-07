@@ -33,7 +33,7 @@ ohmyzsh/ohmyzsh path:plugins/fzf
 romkatv/powerlevel10k
 
 # suggests pkg to install if command not found
-ohmyzsh/ohmyzsh path:plugins/command-not-found
+# ohmyzsh/ohmyzsh path:plugins/command-not-found
 
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-syntax-highlighting kind:defer
